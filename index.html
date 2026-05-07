@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ODQZ - Premium brands and services across multiple industries">
-    <title>ODQZ - Premium Brands & Services</title>
+    <meta name="description" content="ODQZ - Digital consulting, brand strategy, and premium services for ambitious companies">
+    <title>ODQZ - Premium Digital Consulting & Brand Strategy</title>
     <style>
         * {
             margin: 0;
@@ -12,367 +12,443 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: white;
-            overflow-x: hidden;
+            background: #ffffff;
         }
         
         header {
-            background: white;
-            padding: 25px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
         }
         
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         nav .logo {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 2px;
+            letter-spacing: -0.5px;
+            color: #000;
         }
         
         nav ul {
             list-style: none;
             display: flex;
-            gap: 40px;
+            gap: 50px;
         }
         
         nav a {
-            color: #1a1a1a;
+            color: #666;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 500;
             font-size: 14px;
+            transition: color 0.2s;
         }
         
         nav a:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #000;
         }
         
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        nav .cta {
+            background: #000;
             color: white;
-            padding: 120px 20px;
-            text-align: center;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
         }
         
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+        nav .cta:hover {
+            background: #333;
         }
         
-        .hero h1 {
-            font-size: 64px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 16px 45px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-        
-        .btn-outline:hover {
-            background: white;
-            color: #667eea;
+        section {
+            padding: 80px 40px;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
         
-        section {
-            padding: 100px 20px;
+        .hero {
+            padding: 120px 40px 80px;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #000;
+            border: 2px solid #000;
+        }
+        
+        .btn-secondary:hover {
+            background: #000;
+            color: white;
+        }
+        
+        .services {
+            background: #ffffff;
         }
         
         .section-title {
-            text-align: center;
             font-size: 42px;
-            margin-bottom: 60px;
-            color: #1a1a1a;
             font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
         
-        .brands-section {
-            background: #f5f7fa;
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
         }
         
-        .brands-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
         }
         
-        .brand-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        .service-card {
+            padding: 40px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
             transition: all 0.3s;
-            border: 2px solid transparent;
         }
         
-        .brand-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            border-color: #667eea;
+        .service-card:hover {
+            background: #fff;
+            border-color: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
         }
         
-        .brand-header {
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .portfolio {
+            background: #f9f9f9;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #000;
+        }
+        
+        .portfolio-image {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 120px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 60px;
         }
         
-        .brand-card.digital .brand-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .portfolio-info {
+            padding: 24px;
         }
         
-        .brand-card.cloud .brand-header {
-            background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-        }
-        
-        .brand-card.cloud h3, .brand-card.cloud .desc {
-            color: #0099ff;
-        }
-        
-        .brand-card.blog .brand-header {
-            background: linear-gradient(135deg, #d4754d 0%, #c1634a 100%);
-        }
-        
-        .brand-card.blog h3, .brand-card.blog .desc {
-            color: #d4754d;
-        }
-        
-        .brand-card.courses .brand-header {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        }
-        
-        .brand-card.courses h3, .brand-card.courses .desc {
-            color: #6366f1;
-        }
-        
-        .brand-info {
-            padding: 30px;
-        }
-        
-        .brand-info h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #667eea;
-            font-weight: 700;
-        }
-        
-        .brand-desc {
+        .portfolio-tag {
             color: #666;
-            margin-bottom: 20px;
-            font-size: 15px;
-            line-height: 1.8;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
         
-        .brand-link {
-            color: #667eea;
-            text-decoration: none;
+        .portfolio-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
             font-weight: 700;
-            transition: all 0.3s;
         }
         
-        .brand-link:hover {
-            transform: translateX(5px);
+        .portfolio-desc {
+            color: #999;
+            font-size: 14px;
         }
         
-        .features-section {
+        .team {
             background: white;
         }
         
-        .features-grid {
+        .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
         
-        .feature-item {
+        .team-member {
             text-align: center;
         }
         
-        .feature-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-        
-        .feature-item h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-        
-        .feature-item p {
-            color: #666;
-            font-size: 15px;
-        }
-        
-        .stats-section {
+        .team-avatar {
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        
+        .team-member h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        
+        .team-role {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .team-bio {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .stats {
+            background: linear-gradient(135deg, #000 0%, #333 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 60px 40px;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 50px;
-            text-align: center;
+            gap: 40px;
         }
         
         .stat {
-            padding: 20px;
+            text-align: center;
         }
         
         .stat-number {
             font-size: 48px;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .stat-label {
-            font-size: 16px;
-            opacity: 0.95;
+            font-size: 15px;
+            opacity: 0.8;
         }
         
-        .values-section {
+        .testimonials {
             background: white;
         }
         
-        .values-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
         }
         
-        .value-card {
-            padding: 40px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
-            border-radius: 15px;
-            text-align: center;
-            border-left: 4px solid #667eea;
+        .testimonial {
+            padding: 32px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
         }
         
-        .value-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #1a1a1a;
+        .testimonial-stars {
+            color: #ffc107;
+            margin-bottom: 16px;
+            font-size: 14px;
         }
         
-        .value-card p {
+        .testimonial-text {
             color: #666;
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .testimonial-title {
+            color: #999;
+            font-size: 13px;
         }
         
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 40px;
         }
         
         .cta-section h2 {
             font-size: 44px;
-            margin-bottom: 20px;
             font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
         
         .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
         }
         
         footer {
-            background: #1a1a1a;
-            color: white;
+            background: #0a0a0a;
+            color: #999;
+            padding: 40px;
             text-align: center;
-            padding: 40px 20px;
+            border-top: 1px solid #222;
+        }
+        
+        footer p {
+            font-size: 14px;
+            margin-bottom: 12px;
         }
         
         .footer-links {
-            margin: 15px 0;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .footer-links a {
             color: #999;
             text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
+            font-size: 14px;
+            transition: color 0.2s;
         }
         
         .footer-links a:hover {
-            color: #667eea;
+            color: #fff;
         }
         
         @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+            
             nav ul {
-                flex-direction: column;
-                gap: 15px;
+                gap: 25px;
+                font-size: 12px;
+            }
+            
+            section, .hero {
+                padding: 60px 20px;
             }
             
             .hero h1 {
                 font-size: 36px;
             }
             
-            .hero p {
-                font-size: 18px;
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
             }
         }
     </style>
@@ -382,153 +458,218 @@
         <nav>
             <div class="logo">ODQZ</div>
             <ul>
-                <li><a href="#brands">Brands</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="cta">Get in Touch</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Premium Brands for Every Aspect of Life</h1>
-            <p>Discover our portfolio of excellence across technology, education, lifestyle, and more</p>
-            <a href="#brands" class="btn">Explore Our Brands</a>
-            <a href="#" class="btn btn-outline">Learn More</a>
+        <div class="container">
+            <h1>Transform Your Brand Into Something Extraordinary</h1>
+            <p>We partner with ambitious companies to build digital experiences that drive real business results. Strategic design meets measurable impact.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Start a Project</a>
+                <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+            </div>
         </div>
     </section>
 
-    <section class="brands-section" id="brands">
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Our Premium Brands</h2>
-            <div class="brands-grid">
-                <div class="brand-card digital">
-                    <div class="brand-header">🖥️</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Digital</h3>
-                        <p class="brand-desc desc">Digital transformation and technology solutions for modern enterprises. Expert services for web development, cloud migration, and digital innovation.</p>
-                        <a href="https://odqz.digital" class="brand-link">Visit Brand →</a>
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">Strategic consulting and execution across digital, design, and technology. We work with companies at every stage of growth.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Brand Strategy</h3>
+                    <p>Research-driven brand positioning, identity systems, and messaging frameworks that differentiate you in the market. We define what makes your brand matter.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Digital Design</h3>
+                    <p>Beautiful, functional websites and applications. User-centered design that converts visitors into customers. From wireframes to production, we handle it all.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Growth Strategy</h3>
+                    <p>Data-driven strategies for customer acquisition, retention, and lifetime value. We help you understand what works and scale what matters.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Product Development</h3>
+                    <p>From concept to launch. We validate ideas, design products, and build teams. Strategic thinking applied to execution that brings products to market.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Research & Insights</h3>
+                    <p>Deep market and user research that informs strategy. We uncover opportunities others miss through rigorous analysis and user understanding.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Team & Training</h3>
+                    <p>Build internal capabilities. We train your team, establish processes, and embed best practices so you can execute independently long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <p class="section-subtitle">Companies like yours that saw real results. From early-stage startups to established enterprises.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🚀</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Brand Strategy</div>
+                        <h3>TechFlow Startup</h3>
+                        <p class="portfolio-desc">Complete brand identity, website, and launch strategy for Series A fintech startup. Resulted in 40% higher qualified leads.</p>
                     </div>
                 </div>
-
-                <div class="brand-card cloud">
-                    <div class="brand-header">☁️</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Cloud</h3>
-                        <p class="brand-desc desc">Enterprise cloud infrastructure and SaaS solutions. Scalable, secure, and reliable cloud services trusted by thousands of companies.</p>
-                        <a href="https://odqz.cloud" class="brand-link">Visit Brand →</a>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🏢</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Digital Design</div>
+                        <h3>Corporate Redesign</h3>
+                        <p class="portfolio-desc">Enterprise website redesign focusing on user journey optimization. 3x improvement in conversion rates.</p>
                     </div>
                 </div>
-
-                <div class="brand-card blog">
-                    <div class="brand-header">📝</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Blog</h3>
-                        <p class="brand-desc desc">Industry insights and thought leadership. Stay updated with expert perspectives on technology, innovation, and digital trends.</p>
-                        <a href="https://odqz.blog" class="brand-link">Visit Brand →</a>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">📱</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Product Development</div>
+                        <h3>Mobile App Launch</h3>
+                        <p class="portfolio-desc">Strategy, design, and go-to-market for mobile application. 100K downloads in first month.</p>
                     </div>
                 </div>
-
-                <div class="brand-card courses">
-                    <div class="brand-header">🎓</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Courses</h3>
-                        <p class="brand-desc desc">Online learning platform. Master in-demand skills from world-class instructors. Learn at your own pace with lifetime access.</p>
-                        <a href="https://odqz.courses" class="brand-link">Visit Brand →</a>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">💡</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Growth Strategy</div>
+                        <h3>SaaS Growth Program</h3>
+                        <p class="portfolio-desc">6-month growth consulting engagement. Identified and implemented strategies that tripled ARR.</p>
                     </div>
                 </div>
-
-                <div class="brand-card">
-                    <div class="brand-header">🏡</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Casa</h3>
-                        <p class="brand-desc">Find your dream home with our premium real estate platform. Luxury properties and expert agents at your service.</p>
-                        <a href="https://odqz.casa" class="brand-link">Visit Brand →</a>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🎯</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Rebranding</div>
+                        <h3>Market Pivot</h3>
+                        <p class="portfolio-desc">Complete rebrand for company pivoting to new market. New positioning increased enterprise deals by 60%.</p>
                     </div>
                 </div>
-
-                <div class="brand-card">
-                    <div class="brand-header">✨</div>
-                    <div class="brand-info">
-                        <h3>ODQZ Beauty</h3>
-                        <p class="brand-desc">Premium skincare and cosmetics for every skin tone. Natural, sustainable, and effective beauty solutions.</p>
-                        <a href="https://odqz.beauty" class="brand-link">Visit Brand →</a>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">✨</div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tag">Design System</div>
+                        <h3>Enterprise Design System</h3>
+                        <p class="portfolio-desc">Built scalable design system for large organization. Reduced design-to-dev time by 50%.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title">Why Choose ODQZ</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🌟</div>
-                    <h3>Premium Quality</h3>
-                    <p>Excellence in every product and service. Carefully curated to meet the highest standards of quality.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Customer First</h3>
-                    <p>Your satisfaction is our priority. Dedicated support and exceptional service at every touchpoint.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Innovation</h3>
-                    <p>Continuous improvement and innovation across all our brands and services. Staying ahead of trends.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global Reach</h3>
-                    <p>Serving customers worldwide with local expertise. Available in multiple countries and languages.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats-section">
+    <section class="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Premium Brands</div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">500K+</div>
-                    <div class="stat-label">Active Users</div>
+                    <div class="stat-number">$2B+</div>
+                    <div class="stat-label">Client Revenue Generated</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label">Countries</div>
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Satisfaction Rate</div>
+                    <div class="stat-number">12 yrs</div>
+                    <div class="stat-label">In Business</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="values-section" id="about">
+    <section class="team" id="team">
         <div class="container">
-            <h2 class="section-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Integrity</h3>
-                    <p>We conduct business with honesty, transparency, and ethical principles. Trust is built on integrity.</p>
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">Experienced strategists, designers, and builders working together to solve complex problems.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar">👔</div>
+                    <h3>Sarah Chen</h3>
+                    <div class="team-role">Strategy & Client Leadership</div>
+                    <p class="team-bio">15+ years driving business results through strategic thinking. Former startup founder and venture investor.</p>
                 </div>
-                <div class="value-card">
-                    <h3>Excellence</h3>
-                    <p>We strive for excellence in everything we do. Quality is not negotiable—it's our standard.</p>
+                
+                <div class="team-member">
+                    <div class="team-avatar">🎨</div>
+                    <h3>Marcus Rodriguez</h3>
+                    <div class="team-role">Creative Director</div>
+                    <p class="team-bio">Award-winning designer with expertise in brand identity and digital experience design. Design leader for 7 years.</p>
                 </div>
-                <div class="value-card">
-                    <h3>Innovation</h3>
-                    <p>We embrace change and innovation. Continuous improvement drives everything we create.</p>
+                
+                <div class="team-member">
+                    <div class="team-avatar">💻</div>
+                    <h3>James Park</h3>
+                    <div class="team-role">Technical Director</div>
+                    <p class="team-bio">Full-stack engineer passionate about elegant solutions. Built and scaled multiple platforms from zero to 1M+ users.</p>
                 </div>
-                <div class="value-card">
-                    <h3>Sustainability</h3>
-                    <p>We care about our environment and society. Sustainable practices guide our business decisions.</p>
+                
+                <div class="team-member">
+                    <div class="team-avatar">📊</div>
+                    <h3>Elena Vasquez</h3>
+                    <div class="team-role">Research & Analytics</div>
+                    <p class="team-bio">Data scientist and researcher. Specializes in user research, market analysis, and growth metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">Don't take our word for it. Hear from the companies we've worked with.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"ODQZ didn't just design our website—they transformed how we think about our business. The strategy work alone was worth 10x what we paid."</p>
+                    <div class="testimonial-author">Michael Torres</div>
+                    <div class="testimonial-title">CEO, Growth Ventures</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Working with their team was seamless. They understood our vision immediately and delivered beyond expectations. Highly recommended."</p>
+                    <div class="testimonial-author">Jennifer Liu</div>
+                    <div class="testimonial-title">CMO, TechFlow</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The ROI on our partnership with ODQZ was immediate. They didn't just execute—they educated us and built capabilities on our team."</p>
+                    <div class="testimonial-author">David Kim</div>
+                    <div class="testimonial-title">Founder, Innovation Labs</div>
                 </div>
             </div>
         </div>
@@ -536,19 +677,19 @@
 
     <section class="cta-section" id="contact">
         <div class="container">
-            <h2>Ready to Experience Excellence?</h2>
-            <p>Explore our brands and discover premium solutions tailored for you</p>
-            <a href="#brands" class="btn">Explore All Brands</a>
+            <h2>Let's Create Something Great</h2>
+            <p>Whether you're just starting out or scaling, we're here to help transform your vision into reality.</p>
+            <a href="mailto:hello@odqz.com" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 ODQZ. All rights reserved. Premium Brands, Exceptional Service.</p>
+        <p>&copy; 2024 ODQZ. All rights reserved.</p>
         <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Careers</a>
+            <a href="mailto:hello@odqz.com">hello@odqz.com</a>
+            <a href="tel:+1234567890">(123) 456-7890</a>
         </div>
     </footer>
 </body>
